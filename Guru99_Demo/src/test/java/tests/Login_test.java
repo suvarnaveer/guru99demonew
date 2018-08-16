@@ -8,19 +8,17 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import Base_classes.Baseclass;
+import lib.Utility;
 import pages.Login_page;
 
-public class Login_test {
-
-	@Test
-	public void login_test() {
-		System.setProperty("webdriver.chrome.driver","C:\\Jars\\ChromeDriver\\chromedriver.exe");
-		WebDriver driver =new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		driver.get("http://www.demo.guru99.com/v4/");
+public class Login_test extends Baseclass{
+	//WebDriver driver=null;
+	@Test(description="perform valid login")
+	public void LoginApplication() {
 		Login_page login=PageFactory.initElements(driver, Login_page.class);
 		login.login_guru99("mngr149258", "YmedegE");
 		
-		//Assert.assertTrue(driver.getTitle().contains("Guru99 Bank"),"Title is not matched,Login Unsuccessful");
+		Assert.assertTrue(driver.getTitle().contains("Guru99 Bank"),"Title is not matched,Login Unsuccessful");
 	}
 }

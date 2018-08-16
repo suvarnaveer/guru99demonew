@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Pankaj\AppData\Local\Temp\testng-eclipse--589154649\testng-customsuite.xml</span>
+                    <span>C:\Users\Pankaj\AppData\Local\Temp\testng-eclipse-734757139\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -101,7 +101,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="tests.Login_test" class="method navigator-link" hash-for-method="login_test">login_test</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="tests.Login_test" class="method navigator-link" hash-for-method="LoginApplication">LoginApplication</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -124,9 +124,11 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="login_test">
-                  </a> <!-- login_test -->
-                  <span class="method-name">login_test</span>
+                  <a name="LoginApplication">
+                  </a> <!-- LoginApplication -->
+                  <span class="method-name">LoginApplication</span>
+                  <em>
+(perform valid login)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,7 +136,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Pankaj\AppData\Local\Temp\testng-eclipse--589154649\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Pankaj\AppData\Local\Temp\testng-eclipse-734757139\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -185,14 +187,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'login_test')
+data.setCell(0, 1, 'LoginApplication')
 data.setCell(0, 2, 'tests.Login_test')
-data.setCell(0, 3, 13206);
+data.setCell(0, 3, 3593);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -219,10 +221,22 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">tests.Login_test</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">login_test</span>
+              <div class="configuration-class before">
+                <span class="method-name">SetUp</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">LoginApplication</span>
+                <span class="method-start">18190 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">TearDown([TestResult name=LoginApplication status=SUCCESS method=Login_test.LoginApplication()[pri:0, instanc...)</span>
+                <span class="method-start">21784 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">CloseApplication</span>
+                <span class="method-start">21785 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
