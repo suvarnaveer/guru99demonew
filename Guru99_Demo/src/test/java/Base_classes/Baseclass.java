@@ -15,6 +15,9 @@ import lib.Utility;
 
 public class Baseclass {
 	public WebDriver driver;
+	/*public Baseclass(WebDriver driver2) {
+		
+	}*/
 	@BeforeClass
 	public void SetUp() {
 		System.setProperty("webdriver.chrome.driver","C:\\Jars\\ChromeDriver\\chromedriver.exe");

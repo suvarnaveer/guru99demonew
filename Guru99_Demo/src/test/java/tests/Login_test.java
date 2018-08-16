@@ -14,11 +14,16 @@ import pages.Login_page;
 
 public class Login_test extends Baseclass{
 	//WebDriver driver=null;
+//	public Login_test (WebDriver driver) {
+//		this.driver = super.driver;
+//	}
+	
 	@Test(description="perform valid login")
 	public void LoginApplication() {
 		Login_page login=PageFactory.initElements(driver, Login_page.class);
 		login.login_guru99("mngr149258", "YmedegE");
 		
-		Assert.assertTrue(driver.getTitle().contains("Guru99 Bank"),"Title is not matched,Login Unsuccessful");
+		Assert.assertEquals(login.loggedInUser().trim(),"Manger Id : mngr149258");
+		//Assert.assertTrue(driver.getTitle().contains("Guru99 Bank"),"Title is not matched,Login Unsuccessful");
 	}
 }

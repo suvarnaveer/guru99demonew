@@ -6,7 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class NewCustomer_page {  
-	WebDriver driver;	
+/*	WebDriver driver;	
+	public NewCustomer_page(WebDriver driver) {
+		this.driver=driver;
+	}*/
 	@FindBy(how=How.XPATH,using="//a[text()=\"New Customer\"]") WebElement CreateCustomer;
 	@FindBy(how=How.XPATH,using="//input[@name=\"name\"]") WebElement CustName;
 	@FindBy(how=How.NAME,using="rad1") WebElement Gender;
@@ -20,16 +23,16 @@ public class NewCustomer_page {
 	@FindBy(how=How.NAME,using="password") WebElement password;
 	@FindBy(how=How.NAME,using="sub") WebElement submit;
 	@FindBy(how=How.NAME,using="res") WebElement reset;
+	@FindBy(xpath="//table[@id='customer']//p") WebElement reg_Msg;
 
-	public void NewCustomer_page(WebDriver driver) {
-		this.driver=driver;
-	}
+	
 	public void CreateCustomer(String Customername,String dob,String addresses,String city,String state,String Pinno,String phoneno,String emailaddress,String pass) {
 		CreateCustomer.click();
 		CustName.sendKeys(Customername);
 		Gender.click();
-		DOB.sendKeys(dob);
-		address.sendKeys(addresses);
+		DOB.sendKeys("07-01-1989");
+		//selectCalendarDate(dob);
+		address.sendKeys(addresses.trim());
 		City.sendKeys(city);
 		State.sendKeys(state);
 		pinno.sendKeys(Pinno);
@@ -39,6 +42,9 @@ public class NewCustomer_page {
 		submit.click();
 		
 	}
-
+	
+	public String registrationSuccess() {
+		return reg_Msg.getText();
+	}
 
 }
