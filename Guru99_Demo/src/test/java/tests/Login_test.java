@@ -12,13 +12,13 @@ import Base_classes.Baseclass;
 import lib.Utility;
 import pages.Login_page;
 
+
 public class Login_test extends Baseclass{
-	//WebDriver driver=null;
-//	public Login_test (WebDriver driver) {
-//		this.driver = super.driver;
-//	}
-	
-	@Test(description="perform valid login")
+	/*WebDriver driver=null;
+	public Login_test (WebDriver driver) {
+	this.driver = driver;
+	}*/
+	@Test
 	public void LoginApplication() {
 		Login_page login=PageFactory.initElements(driver, Login_page.class);
 		login.login_guru99("mngr149258", "YmedegE");

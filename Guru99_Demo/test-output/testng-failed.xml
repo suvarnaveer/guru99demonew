@@ -6,9 +6,14 @@
       <class name="tests.Login_test">
         <methods>
           <include name="LoginApplication"/>
-          <include name="SetUp"/>
+          <include name="LoginApplication"/>
         </methods>
       </class> <!-- tests.Login_test -->
+      <class name="tests.NewCustomerCreate_test">
+        <methods>
+          <include name="CreateCutomer"/>
+        </methods>
+      </class> <!-- tests.NewCustomerCreate_test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

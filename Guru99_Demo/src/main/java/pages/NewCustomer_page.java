@@ -6,10 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class NewCustomer_page {  
-/*	WebDriver driver;	
+	WebDriver driver;	
 	public NewCustomer_page(WebDriver driver) {
 		this.driver=driver;
-	}*/
+	}
 	@FindBy(how=How.XPATH,using="//a[text()=\"New Customer\"]") WebElement CreateCustomer;
 	@FindBy(how=How.XPATH,using="//input[@name=\"name\"]") WebElement CustName;
 	@FindBy(how=How.NAME,using="rad1") WebElement Gender;
